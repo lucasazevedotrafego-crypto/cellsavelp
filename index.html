@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-     <!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -94,6 +94,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             line-height: 1.8;
             overflow-x: hidden;
             font-weight: 300;
+            height: 100vh;
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -189,25 +190,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             transform: scale(1.1);
         }
         
-        /* Sections */
-        section {
-            padding: 0;
-            position: relative;
-            min-height: var(--section-height);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .section-content {
-            width: 100%;
-            padding: 60px 0;
-        }
-        
         /* Hero Section */
         .hero {
-            height: var(--section-height);
+            height: 100vh;
             min-height: 600px;
             display: flex;
             align-items: center;
@@ -265,67 +250,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             font-weight: 300;
         }
         
-        /* Location Section */
-        .location-content {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .location-info {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 30px;
-            border-radius: 8px;
-        }
-        
-        .location-info p {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-        
-        .map-container {
-            width: 100%;
-            height: 450px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 50px 0;
-            text-align: center;
-        }
-        
-        .copyright {
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
-        
         /* Responsive Design */
-        @media (min-width: 769px) {
-            .location-content {
-                flex-direction: row;
-            }
-            
-            .location-info {
-                flex: 1;
-            }
-            
-            .map-container {
-                flex: 2;
-            }
-        }
-        
         @media (min-width: 1025px) {
             h1 {
                 font-size: 3rem;
@@ -334,20 +259,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         @media (max-width: 768px) {
             .hero {
-                padding-top: 40px; /* Reduzi o espaçamento superior após remover o logo */
+                padding-top: 40px;
             }
             
             .hero h1 {
-                font-size: 2rem; /* Tamanho de fonte menor para dispositivos móveis */
+                font-size: 2rem;
             }
             
             .hero .description {
-                font-size: 1rem; /* Textos menores em dispositivos móveis */
+                font-size: 1rem;
             }
             
             .hero .subheading {
-                font-size: 1.1rem; /* Tamanho ajustado para dispositivos móveis */
-                font-weight: 400; /* Mantendo o peso normal para melhor legibilidade */
+                font-size: 1.1rem;
+                font-weight: 400;
             }
         }
     </style>
@@ -379,42 +304,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </a>
             </div>
         </section>
-        
-        <!-- Location Section -->
-        <section id="location" class="location">
-            <div class="section-content">
-                <div class="container">
-                    <h2>Faça-nos uma visita!</h2>
-                    <p>Estamos localizados no coração de Poços de Caldas, prontos para te atender com rapidez e profissionalismo.</p>
-                    
-                    <div class="location-content">
-                        <div class="location-info">
-                            <p><strong>Endereço:</strong> Rua Pernambuco, 981 – Centro, Poços de Caldas – MG</p>
-                            <p><strong>Telefone:</strong> (35) 3114-0511</p>
-                            <p><strong>Horário de funcionamento:</strong> Segunda a Sexta, das 9h às 18:30h | Sábados, das 9h às 13h</p>
-                            <div style="margin-top: 2rem;">
-                                <a href="https://wa.me/553531140511" class="btn" target="_blank" rel="noopener noreferrer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173-.199-.347-.223-.644-.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.174-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h+.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                                    </svg>
-                                    Falar com a Cell Save no WhatsApp
-                                </a>
-                            </div>
-                        </div>
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.843026939412!2d-46.56439148509238!3d-21.787392985614735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b8df1a2b5b3f%3A0x7d5a1c5c5c5c5c5!2sRua%20Pernambuco%2C%20981%20-%20Centro%2C%20Po%C3%A7os%20de%20Caldas%20-%20MG!5e0!3m2!1spt-BR!2sbr!4v1648324567890!5m2!1spt-BR!2sbr" loading="lazy" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade" title="Mapa da localização da Cell Save"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
-    
-    <footer>
-        <div class="container">
-            <p class="copyright">© 2025 Cell Save – Todos os direitos reservados.</p>
-        </div>
-    </footer>
     
     <script>
         // WhatsApp click handler
@@ -427,5 +317,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 </body>
 </html>
-
-
